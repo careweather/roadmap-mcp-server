@@ -1,0 +1,22 @@
+$schema: https://raw.githubusercontent.com/careweather/standards/main/alfred/schemas/review-config.schema.json
+version: 1
+mode: shadow
+targetBranches:
+  - master
+maxFilesWithoutReview: 20
+requireAuthorOwnership: true
+protectedPaths:
+  - .github/**
+  - .github/review.yaml
+  - alfred/**
+  - governance/**
+protectedFallbackReviewers: []
+relatedRepositories:
+  - careweather/roadmap
+codeownersCleanup:
+  enabled: false
+review:
+  startWhenReady: true
+  debounceSeconds: 120
+  requireFixConfirmation: true
+  suppressNewLowMediumDuringConfirmation: true
